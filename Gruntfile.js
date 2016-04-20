@@ -108,10 +108,13 @@ module.exports = function(grunt) {
       'ts',
       'postcss',
       'manifest:forTesting',
-      'http-server', 'protractor',
-      'manifest:forProduction']);
+      'http-server', 
+      'protractor',
+      'manifest:forProduction'
+  ]);
   grunt.registerTask('skipProtractor', ['ts',
       'postcss',
-      'manifest:forProduction']);
+      'manifest:forProduction'
+  ]);
 
 };

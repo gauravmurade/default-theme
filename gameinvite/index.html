@@ -25,7 +25,7 @@
       ng-src="{{main.gameHeader320x50Url()}}"
       width="320" height="50"
       class="gameHeader horizontal-center">
-
+</br></br>
   <table ng-if="main.getAvatarImage()" class="horizontal-center">
     <td>
       <img id="test_avatar_image" ng-src="{{main.getAvatarImage()}}" width="50" height="50" class="avatar">
@@ -37,17 +37,18 @@
       <img id="test_gameIcon50x50Url" ng-src="{{main.gameIcon50x50Url()}}" width="50" height="50" class="gameIcon">
     </td>
   </table>
-
-  <div class="horizontal-center">{{'GAME_INVITE_INSTALL_APP_FROM' | translate}}</div>
+  <br></br>
+  
+  <div class="horizontal-center">{{'GAME_INVITE_INSTALL_APP_FROM' | translate}}</div></br>
   <div ng-if="!main.isMobile()" class="horizontal-center">
-    <button id="test_open_apple_appstore" ng-if="main.hasIosApp()" class="btn btn-primary"
+    <md-button  flex ="50"" id="test_open_apple_appstore" ng-if="main.hasIosApp()" class="btn btn-primary"
         ng-click="main.openLocation('APPLE')">
       {{'GAME_INVITE_INSTALL_APP_FROM_APPLE_APPSTORE' | translate}}
-    </button>
-    <button id="test_open_google_play" class="btn btn-primary"
+    </md-button>
+    <md-button flex ="50" id="test_open_google_play" class="btn btn-primary"
         ng-click="main.openLocation('GOOGLE')">
       {{'GAME_INVITE_INSTALL_APP_FROM_GOOGLE_PLAY' | translate}}
-    </button>
+    </md-button>
   </div>
 
   <div ng-if="main.isMobile()" class="horizontal-center">
@@ -55,7 +56,7 @@
       {{'GAME_INVITE_OPEN_OR_INSTALL_GAME_NAME' | translate}}
     </button>
   </div>
-
+ <br></br>
   <select class="languageSelect horizontal-center"
       ng-if="main.l10n().getSupportedLanguages().length > 1"
       ng-model="main.model().currentLanguage"

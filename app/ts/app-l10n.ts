@@ -839,5 +839,6 @@
     },
   };
   
-  gamingPlatform.main.l10n().setTranslations(<any>platformTranslations);
+  let w: any = window;
+  w.platformTranslations = platformTranslations;
 })();
